@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>How Does The A.I. Think?</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body background="/Backgrounds/white2.jpg">
+
+<p><strong><u>How does the A.I. think? </u></strong></p>
+<p>Basically, the computer opponents &quot;want&quot; the same thing as the player 
+  - to conquer the world.</p>
+<p>However, their current formula to detirmine how to do that is pretty unadvanced 
+  currently.</p>
+<p>The first step in the turn of each A.I. is to detirmine whether or not it is 
+  wise to attack one of one's neighbors. This is accomplished as follows :</p>
+<table width="99%" border="5" cellspacing="2" cellpadding="2">
+  <tr>
+    <td bgcolor="#CCCCCC"><font size="2">function determine_defender(countries, ind_att)<br>
+      {<br>
+      var ind_defender = -1;<br>
+      var ind; 
+      <p> //determine country with minimum count of men<br>
+        var min = countries[ind_att].men; //default<br>
+        var nbr = countries[ind_att].nbr;</p>
+      <p>for(ind = 0; ind &lt; nbr.length; ++ind)<br>
+        {<br>
+        if( (countries[ind_att].objleader.leader != countries[nbr[ind]].objleader.leader)<br>
+        &amp;&amp; (countries[ind_att].men &gt; (countries[nbr[ind]].men * 1.5) 
+        )<br>
+        &amp;&amp; (countries[nbr[ind]].men &lt; min) )<br>
+        {<br>
+        min = countries[nbr[ind]].men;<br>
+        ind_defender = nbr[ind];<br>
+        }<br>
+        }</p>
+      <p> return ind_defender;<br>
+        }</p>
+      </font></td>
+  </tr>
+</table>
+<p>Ok. I won't pretend to know exactally what all this coding means since it was 
+  not written by me, but what I do understand is that somehow the neighbors (adjacent 
+  countries to the nation whose turn it is) are scanned. Only the one with the 
+  smallest amount of troops is a possible target. And the nation only becomes 
+  a potential target if the attacker nation has at least 1.5 times as many troops 
+  (in their country, not necessarily all to be used in the attack).</p>
+<table width="99%" border="5" cellspacing="2" cellpadding="2">
+  <tr>
+    <td height="401" bgcolor="#CCCCCC"><p><font size="2">function should_fight(att, def)<br>
+        {<br>
+        var percent = Math.floor( (att.men / def.men) * 10.0);<br>
+        <br>
+        if (percent &gt; 25)<br>
+        {<br>
+        percent += 5<br>
+        }<br>
+        else<br>
+        {<br>
+        percent -= 5<br>
+        }<br>
+        if ( ((att.economy + att.gold) / (def.economy + def.gold)) &gt; 2)<br>
+        percent-=15;<br>
+        else if ( (def.economy + def.gold) &gt;= ((att.economy + att.gold) * 2) 
+        )<br>
+        percent+=15; <br>
+        <br>
+        var random = Math.floor( ( (Math.random() * 2000000) % 100) + 1);</font></p>
+      <p><font size="2"> if (percent &gt; random) return true;<br>
+        else return false;<br>
+        }</font></p>
+</td>
+  </tr>
+</table>
+<p>What is first happening here is that the computer divides the attacker's men 
+  by the defender's and multiplies by 10. So for example the attack has 150 men 
+  is his home country and the attacker has 50, so (150/50) * 10 = 30. 30 becomes 
+  the variable <strong>percent</strong> (to detirmined the percentage likelihood 
+  of attack).</p>
+<p>Second step : If percent is greater than 25 then it automatically jumps up 
+  5. So percent is now 35.</p>
+<p>Now, third step : If the target (potential defender) country is particularly 
+  rich (double the economy and gold of the attacker) the chances of attack go 
+  up 15%. If twice as poor (less or equal to half of the attacker countries econ 
+  + gold) attack chances go down 15%. If neither applies the percent chance of 
+  attack remains the same.</p>
+<p>Just for fun we'll say the defender is indeed twice as wealthy. So now the 
+  chance has risen to an even 50%. A random number is selected. If over 50 the 
+  attack is not made and the A.I. develops his nation (trains, builds, hires or 
+  moves) instead. If under 50... the battle rages...</p>
+<table width="99%" border="5" cellspacing="2" cellpadding="2">
+  <tr>
+    <td bordercolor="#CCCCCC" bgcolor="#CCCCCC"><font size="2">var g_att, g_def, g_att_assigned, g_total_skill; 
+      <p>function fight(att, def)<br>
+        {<br>
+        var outstr = '';<br>
+        var att_force_random = Math.floor( ( (Math.random() * 2000000) % 11) + 
+        1);<br>
+        att_force_random = att_force_random / 100<br>
+        att_force_random = att_force_random + .64<br>
+        var att_assigned = Math.floor(att.men * att_force_random); //between 65 
+        and 75% of soldiers attack<br>
+        att.men -= att_assigned //deduct men from attacking country<br>
+        var total_skill = att.skill + def.skill;<br>
+        <br>
+        txtBattles.innerHTML = ''; BattleStats.innerHTML = '';<br>
+        outstr += att.objleader.leader + ' from ' + att.name + ' has invaded ' 
+        ;<br>
+        outstr += def.objleader.leader + ' in ' + def.name + '!! &lt;BR/&gt;' 
+        ;<br>
+        print_stats(gcountries);<br>
+        <br>
+        //&lt;embed src=&quot;SWRDHORS.AIFF&quot; autostart=&quot;true&quot; loop=&quot;false&quot; 
+        hidden=true&gt;&lt;/embed&gt;<br>
+        <br>
+        txtBattles.innerHTML += outstr + 'The Battle rages....&lt;BR/&gt;' ;</p>
+      <p> g_att = att; g_def = def; g_att_assigned = att_assigned; g_total_skill 
+        = total_skill;<br>
+        fight_men();<br>
+        }</p>
+      </font></td>
+  </tr>
+</table>
+<p>First step now is detirmine how many men from the attacking nation are actually 
+  going to war. Obviously the attacker can't send them all or he'd be defenseless 
+  himself to other neighbors (unless he was surrounded by only friendly/his own 
+  nations).</p>
+<p>So the computer generates a random number between one and 11 and adds to to 
+  64 and thus between 65 and 75% of the attacker's forces come to fight while 
+  the rest remain home to guard the motherland.</p>
+<table width="99%" border="5" cellspacing="2" cellpadding="2">
+  <tr>
+    <td height="849" bgcolor="#CCCCCC"><font size="2">function fight_men()<br>
+      {<br>
+      var outstr = ''; 
+      <p> if( (g_att_assigned &gt; 0) &amp;&amp; (g_def.men &gt; 0) )<br>
+        {<br>
+        var random = Math.floor( (Math.random() * 2000000) % g_total_skill + 1);<br>
+        if (random &lt;= g_att.skill)<br>
+        {<br>
+        g_def.men -= 1;<br>
+        <br>
+        }<br>
+        else<br>
+        {<br>
+        g_att_assigned -= 1;</p>
+      <p> }<br>
+        }</p>
+      <p> if (g_def.men == 0) //attacker won<br>
+        {<br>
+        g_def.skill = g_att.skill + 5 //attacker's skill rises 5 points<br>
+        g_def.men += g_att_assigned; //attackers men stay to protect defeated 
+        country<br>
+        outstr += g_def.objleader.leader + &quot;\'s army has been defeated. &lt;BR/&gt;&quot;;<br>
+        outstr += 'Country ' + g_def.name + ' passes to ' + g_att.objleader.leader 
+        + '&lt;BR/&gt;' ;<br>
+        --(g_def.objleader.count) ;<br>
+        ++(g_att.objleader.count);<br>
+        if (g_def.objleader.count == 0) outstr += '&lt;font color=&quot;red&quot;&gt;' 
+        + g_def.objleader.leader + ' has been annihilated! &lt;font color=&quot;black&quot;&gt; 
+        &lt;BR/&gt;' ;<br>
+        g_def.objleader = g_att.objleader; //country changes hands<br>
+        document.all(&quot;im&quot; + g_def.name).src = document.all(&quot;im&quot; 
+        + g_att.name).src;<br>
+        document.all(&quot;im&quot; + g_def.name).width = document.all(&quot;im&quot; 
+        + g_att.name).width;<br>
+        document.all(&quot;im&quot; + g_def.name).height = document.all(&quot;im&quot; 
+        + g_att.name).height;<br>
+        document.all(&quot;im&quot; + g_def.name).style.top = g_def.y - (document.all(&quot;im&quot; 
+        + g_def.name).height /2);<br>
+        document.all(&quot;im&quot; + g_def.name).style.left = g_def.x - (document.all(&quot;im&quot; 
+        + g_def.name).width /2);<br>
+        print_stats();<br>
+        //eval(&quot;im_&quot; + g_def.name + &quot;.src= g_att.objleader.colorfile&quot;);<br>
+        setTimeout(&quot;BattleStats.innerHTML = ''&quot;,1000);<br>
+        picBattle.style.display = &quot;none&quot;;<br>
+        if (g_ind_att &lt; CNT_COUNTRIES - 1)<br>
+        setTimeout(&quot;goCountry(&quot; + (g_ind_att + 1) + &quot;)&quot;,2500);<br>
+        else<br>
+        {<br>
+        g_ind_att = 0;<br>
+        runRound();<br>
+        }<br>
+        }<br>
+        else if(g_att_assigned == 0) //defender won<br>
+        {<br>
+        g_def.skill += 5;<br>
+        outstr += g_att.objleader.leader + &quot;\'s army has been defeated.&lt;BR/&gt;&quot;;<br>
+        outstr += g_def.objleader.leader + ' holds on to ' + g_def.name + '&lt;BR/&gt;';<br>
+        setTimeout(&quot;BattleStats.innerHTML = ''&quot;,1000);<br>
+        picBattle.style.display = &quot;none&quot;;<br>
+        if (g_ind_att &lt; CNT_COUNTRIES -1)<br>
+        setTimeout(&quot;goCountry(&quot; + (g_ind_att + 1) + &quot;)&quot;,2500);<br>
+        else<br>
+        {<br>
+        g_ind_att = 0;<br>
+        runRound();<br>
+        }</p>
+      <p> }<br>
+        else<br>
+        setTimeout(&quot;fight_men()&quot;, 1);</p>
+      <p> txtBattles.innerHTML += outstr;<br>
+        }</p>
+      </font></td>
+  </tr>
+</table>
+<p>Despite all the code (a lot of it updating stats and displaying information 
+  onscreen) the battle process is beautifully simple. The attacker and defender 
+  skills are added up and a random number between 1 and the sum of their totals 
+  is created. If that number falls between 1 and the attacker's skill then the 
+  defender loses a man, if it's higher the defneder loses one. The fight goes 
+  on like this until one of the nations loses all their troops.</p>
+<table width="99%" border="5" cellspacing="2" cellpadding="2">
+  <tr> 
+    <td bgcolor="#CCCCCC"><font size="2">function prepare(att, selchoice, selvalue)<br>
+      {<br>
+      var choice;<br>
+      var args;<br>
+      var max_eco = 5000;<br>
+      <br>
+      if (args &gt; 1)<br>
+      choice = selchoice;<br>
+      else<br>
+      {<br>
+      if ( NoHostileNbrs(att) &amp;&amp; att.men &gt;=50 )<br>
+      choice = 4;<br>
+      else if (att.men &lt; 25)<br>
+      choice = 1;<br>
+      else if (att.economy == max_eco)<br>
+      choice = Math.floor( (Math.random() * 2000000) % 2 + 1 );<br>
+      else<br>
+      choice = Math.floor( (Math.random() * 2000000) % 3 + 1 );<br>
+      } 
+      <p> var hire = 0, outstr='';</p>
+      <p> outstr = '&lt;img align=&quot;left&quot; src=&quot;' + att.objleader.leader 
+        + '.gif&quot;/&gt;&lt;BR/&gt;';<br>
+        outstr += &quot;Country &quot; + att.name + ', ' + att.objleader.leader 
+        + &quot;\'s turn&lt;BR/&gt;&quot;;<br>
+        outstr += att.objleader.leader + ' moves ';<br>
+        switch(choice)<br>
+        {<br>
+        case 1:<br>
+        hire = Math.floor(att.gold / get_price_man() );<br>
+        att.men += hire;<br>
+        att.gold -= hire * get_price_man();<br>
+        break;</p>
+      <p> case 2:<br>
+        random = Math.floor( (Math.random() * 2000000) % 3 + 1);<br>
+        att.skill += 3 + random; //goes up to 4-6 points<br>
+        break;</p>
+      <p> case 3:<br>
+        var diff = (max_eco - att.economy) * 2;<br>
+        if (diff &lt; att.gold)<br>
+        {<br>
+        att.gold-=diff;<br>
+        att.economy = max_eco;<br>
+        }<br>
+        else<br>
+        {<br>
+        att.economy += Math.floor(att.gold / 2);<br>
+        <br>
+        if( Math.floor(att.gold/2) &lt; att.gold/2)<br>
+        att.gold=1;<br>
+        else<br>
+        att.gold = 0;<br>
+        <br>
+        }<br>
+        break;<br>
+        <br>
+        case 4:<br>
+        var indnbr = Math.floor( (Math.random() * 2000000) % att.nbr.length + 
+        1);<br>
+        gcountries[att.nbr[indnbr - 1]].men += att.men - 25 ;<br>
+        att.men= 25; <br>
+        }</p>
+      <p> print_stats(gcountries);<br>
+        txtActions.innerHTML += outstr;<br>
+        }</p>
+      </font></td>
+  </tr>
+</table>
+<p>Now the majority of A.I. turns are not going to be battles. The rest of the 
+  time the AI will either train, hire or build into their economy. They will also 
+  automatically transfer troops to an adjancent territory if (A) There are no 
+  hostile neighbors to attack and (B) They have 50 troops or more in their country.</p>
+<p>Also, the Economy rate maxes out at 5000 so if the economy is at that level 
+  then the AI will choose only between hiring and training.</p>
+<p>Outside of these exceptions the AI will randomly hire, train or build. Their 
+  chances of doing any one of these three is 33.33333etc%.</p>
+<p><img src="/Div.gif" width="100%" height="4" alt=""></p>
+<p><a href="AIInANutshell.htm"><img src="Button.gif" width="500" height="100" border="0"></a></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<table>
+
+<tr><td id="HowMuchEcon">
+         <u>Your Orders Sir?</u> : Country #1<br><br>
+         
+         
+         How much do you want to put back into the economy?<br>       
+         <input type="number" name="HowMuch" id="HowMuch"/>
+                
+          <br><br><button> Maximum </button><br>
+                
+         <!-- The "Maximum" buton automatically gives all the gold (divisable by 2)
+          to the economy.  If the user has say, 39 gold for example, it would give 38
+          since the 1 would get rounded away. -->
+
+<br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+<img src="/Div.gif" width="100%" height="4" alt=""> <br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+
+<br>
+          <button align="center" onClick="Compute()"> Let it be done! </button>
+          
+          
+     <!-- The game should validate the code (make sure the user has enough gold to
+      cover his promises) and then implement them if he does.  Otherwise it would
+      print a messege, not enough gold. -->
+          
+</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+<!--
+function Compute()
+{
+  window.returnValue = txtInput.value;
+  window.close();
+}
+// -->
+</script>

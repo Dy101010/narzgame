@@ -1,0 +1,43 @@
+<table>
+
+<tr><td id="Spy">
+         <u>Your Orders Sir?</u> : Country #1<br><br>
+     
+       Which country would you like to spy on?<br> <br>  
+       <select name="spyNum">
+		  <option value="2">Country 2</option>
+  		  <option value="3">Country 3</option>
+  		  <option value="4">Country 4</option>
+  		  <!-- etc. etc. -->
+  		  
+  		 <!-- The game would automatically list all the countries EXCEPT the ones
+  		 already owner by the player (which he could view for free) -->
+  		  
+		</select><br><br>
+
+
+<br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+<img src="/Div.gif" width="100%" height="4" alt=""> <br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+
+<br>
+          <button align="center" onClick="Compute()"> Let it be done! </button>
+          
+          
+     <!-- The game should validate the code to make sure he can afford the 25 gold
+     it costs to hire a spy -->
+          
+</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+<!--
+function Compute()
+{
+  window.returnValue = spyNum.value;
+  window.close();
+}
+// -->
+</script>

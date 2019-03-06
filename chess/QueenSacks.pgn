@@ -1,0 +1,197 @@
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2rk1/pp1p1pp1/1b1p2B1/n1qQ2p1/8/5N2/P3RPPP/4R1K1 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+1. Qxf7+ Rxf7 2. Re8 Rf8 3. Rxf8 Kxf8 4. Re8# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "2r1nr1k/pp1q1p1p/3bpp2/5P2/1P1Q4/P3P3/1B3P1P/R3K1R1 w Q - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+1. Qxf6+ Nxf6 2. Bxf6# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnbqkbn1/ppppp3/7r/6pp/3P1p2/3BP1B1/PPP2PPP/RN1QK1NR w KQ - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qxh5+ Rxh5 2. Bg6# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b1k2r/pp2bppp/8/3N2q1/2p5/8/PPP2PPP/R2QR1K1 w kq - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+1. Nc7+ Kf8 2. Qd8 Bxd8 3. Re8# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2qk1r1/p4p2/bp2pQp1/1n1pP1Bp/7P/3P2N1/P1R2PP1/2R3K1 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Rc8 Rxc8 2. Rxc8 Bxc8 ( ... Qxc8 3. Qe7# ) 3. Qxd8# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2q1r2/pp2np2/1bp4p/3p2pk/1P1N2b1/2PB2B1/P5PP/R2QK2R w KQ - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qxg4+ Kxg4 2. Be2# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1bqr3/pp1kn1pp/2pp4/6B1/1P6/PBp5/2P2PPP/R2QR1K1 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+1. Qxd6+ Kxd6 2. Bf4+ Kd7 3. Be6# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6R1/p4p2/1p2q2p/8/6Pk/8/PP2r1PK/3Q4 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+1. Qe1+ Rxe1 2. g3# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6kr/1q2r1p1/1p2N1Q1/5p2/1P1p4/6R1/7P/2R3K1 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Rc8 Qxc8 2. Qg7+ Rxg7 3. Rxg7# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6rr/p2b1pk1/1pn1p1p1/2qpPP2/3N2P1/2P1Q3/P2B2K1/2R4R w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qh6+ Rxh6 2. Bxh6+ Kh7 3. Bf8# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r2r3k/p5pp/4R3/2q2p1Q/1nBR4/4P3/1P3PPP/6K1 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qxh7+ Kxh7 2. Rh4+ Kg8 3. Re8# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "kr5r/p7/8/8/4q3/8/1R3Q2/KR6 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qxa7+ Kxa7 2. Ra2+ Qa4 3. Rxa4# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rn1q1b1r/ppp2B2/7p/4Bk2/3Pn1pP/3Qp3/PPP3P1/RN4K1 w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qxe4+ Kxe4 2. Nc3+ Kf5 3. Rf1# 1-0
+
+[Event " White to move."]
+[Site "?"]
+[Date "1998.??.??"]
+[Round "?"]
+[White "1001 Brilliant Ways"]
+[Black "to Checkmate"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r1b2knr/ppN2ppp/2n5/8/8/8/qPPQ1PPP/2KR1B1R w - - 0 1"]
+[PlyCount "0"]
+[EventDate "1998.??.??"]
+
+ 1. Qd6+ Nge7 2. Qd8+ Nxd8 3. Rxd8# 1-0
+
+

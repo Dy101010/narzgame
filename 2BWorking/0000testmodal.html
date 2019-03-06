@@ -1,0 +1,97 @@
+<html>
+<head></head>
+<body>
+
+
+<table><tr><td height="185" id="humaninp">
+                         <u>Your Orders Sir?</u> : Country #1<br><br>
+                
+                <input type="radio" name="orders" id="econ">Put money back into the economy<br>
+                
+                <input type="radio" name="orders" id="men">Hire solidiers<br>
+                
+                <input type="radio" name="orders" id="train">Train your solidiers<br>
+                
+                <input type="radio" name="orders" id="war">Goto war with neighboring country<br>
+                
+                <input type="radio" name="orders" id="move">Move men to adjoining friendly nation<br>
+                
+                <input type="radio" name="orders" id="spy">Recruit a spy<br>
+
+<br>
+                <button align="center"  onclick="FurtherInfo()">Let it be done!</button>
+</td>
+</tr>
+</table>
+
+
+
+
+
+<script language="JavaScript">
+
+
+function FurtherInfo()
+{
+    
+    if (orders['econ'].checked)
+         {
+                 var econNum = window.showModalDialog("0Popups/Econ.html",
+            "dialogHeight: 50px; dialogWidth: 500px; dialogTop: 0px;" +
+                "dialogLeft: 0px; center: Yes; help: Yes; resizable: Yes;" +
+                " status: Yes;");
+  alert('The return value is:' + econNum);
+        }      
+       
+    else if (orders['men'].checked)
+         {
+                 var hireNum = window.showModalDialog("0Popups/Men.html",
+            "dialogHeight: 50px; dialogWidth: 500px; dialogTop: 0px;" +
+                "dialogLeft: 0px; center: Yes; help: Yes; resizable: Yes;" +
+                " status: Yes;");
+ alert('The return value is:' + hireNum);
+        }    
+       
+    else if (orders['train'].checked)
+// no need for pop-up : training code goes here
+document.write("You trained.");
+
+       
+    else if (orders['war'].checked)
+         {
+                 var hireNum = window.showModalDialog("0Popups/War.html",
+            "dialogHeight: 50px; dialogWidth: 500px; dialogTop: 0px;" +
+                "dialogLeft: 0px; center: Yes; help: Yes; resizable: Yes;" +
+                " status: Yes;");
+// With the War and Move commands the modal window has to return two values (which country
+// to move to (or attack) and how many men.
+        }   
+        
+    else if (orders['move'].checked)
+         {
+                 var hireNum = window.showModalDialog("0Popups/Move.html",
+            "dialogHeight: 50px; dialogWidth: 500px; dialogTop: 0px;" +
+                "dialogLeft: 0px; center: Yes; help: Yes; resizable: Yes;" +
+                " status: Yes;");
+// With the War and Move commands the modal window has to return two values (which country
+// to move to (or attack) and how many men.
+        }   
+        
+
+      
+        else if (orders['spy'].checked)
+         {
+                 var spyNum = window.showModalDialog("0Popups/Spy.html",
+            "dialogHeight: 50px; dialogWidth: 500px; dialogTop: 0px;" +
+                "dialogLeft: 0px; center: Yes; help: Yes; resizable: Yes;" +
+                " status: Yes;");
+ alert('The return value is:' + spyNum);
+        }   
+        
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AI Attributes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body background="/Backgrounds/white2.jpg">
+
+<p><font size="4">Well for starters I would like to develop different &quot;personality 
+  types&quot;. Rather than the A.I. all following the same formula (hiring 1/3, 
+  training 1/3, building 1/3, X likelihood of attacking, etc.) I'd like to create 
+  various personalities to make things more interesting for the player.</font></p>
+<p><font size="4">Here is the example of how I would like the A.I. players for 
+  my presented simulation to function (note : they don't currently function this 
+  way, this is one of the first features I would like to add, along with the human 
+  player of course.</font></p>
+<p><img src="/Div.gif" width="100%" height="4" alt=""></p>
+<p><u>Name</u> : Name of leader, pretty self explanatory</p>
+<p><u>T%, H%, B%</u> : Each turn the AI players must take an action. If they do 
+  not go to war (or transfer troops) they have the choice to either Train, Hire 
+  or Build (Economy), these percentages show the likelihood of each for the given 
+  player.</p>
+<p><u>ASN</u> = Attack Strngth Needed. A player will only even consider attack 
+  if he has this percentage of his potential victim's amount of troops.</p>
+<p><u>AA</u> = Agressiveness Amount. The likelihood of attack with go up or down 
+  a percentage based on this number.</p>
+<table width="99%" height="500" border="1" cellpadding="3">
+  <tr> 
+    <td width="14%">Name</td>
+    <td width="5%">T%</td>
+    <td width="5%">H%</td>
+    <td width="5%">B%</td>
+    <td width="5%">ASN</td>
+    <td width="5%">AA</td>
+    <td width="56%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Narz.gif" width="100" height="100"></p>
+      <p>The Narz</p>
+      </td>
+    <td>40</td>
+    <td>10</td>
+    <td>50</td>
+    <td>2.25</td>
+    <td>0</td>
+    <td>A patient and balanced opponent.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Playful.gif" width="100" height="100"></p>
+      <p>The Playful</p>
+      </td>
+    <td>25</td>
+    <td>50</td>
+    <td>25</td>
+    <td>1.5</td>
+    <td>10</td>
+    <td>Too slow to train and quick to fight, The Playful may not be a likely 
+      winner in the long haul.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Machine.gif" width="100" height="100"></p>
+      <p>The Machine</p>
+      </td>
+    <td>40</td>
+    <td>30</td>
+    <td>30</td>
+    <td>2.0</td>
+    <td>0</td>
+    <td>Fairly balanced</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Plebeian.gif" width="100" height="100"></p>
+      <p>The Plebeian</p>
+      </td>
+    <td>20</td>
+    <td>25</td>
+    <td>55</td>
+    <td>2.5</td>
+    <td>-10</td>
+    <td>This man is a builder. Slow to attack he prefers to strengthen his home. 
+      Train to hire ratio a little unbalanced.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Seductress.gif" width="100" height="100"></p>
+      <p>The Seductress</p>
+      </td>
+    <td>70</td>
+    <td>10</td>
+    <td>20</td>
+    <td>2.5</td>
+    <td>20</td>
+    <td>Highly trained and highly agressive but only when the time is right.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Unimpressed.gif" width="100" height="100"></p>
+      <p>The Unimpressed</p>
+      </td>
+    <td>60</td>
+    <td>30</td>
+    <td>10</td>
+    <td>2.0</td>
+    <td>10</td>
+    <td>Unimpressed with economic ventures this fellow focuses on conquest.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Unrepressed.gif" width="100" height="100"></p>
+      <p>The Unrepressed</p>
+      </td>
+    <td>40</td>
+    <td>30</td>
+    <td>30</td>
+    <td>1.5</td>
+    <td>20</td>
+    <td>Overagressive</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Peaceful.gif" width="100" height="100"></p>
+      <p>The Peaceful</p>
+      </td>
+    <td>20</td>
+    <td>10</td>
+    <td>70</td>
+    <td>2.5</td>
+    <td>-20</td>
+    <td>She'll only attack if you're really asking for it. Great builder.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Creator.gif" width="100" height="100"></p>
+      <p>The Creator</p>
+      </td>
+    <td>20</td>
+    <td>10</td>
+    <td>70</td>
+    <td>2.0</td>
+    <td>0</td>
+    <td>Another great builder, but not particular inclined to aviod battle</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Empress.gif" width="100" height="100"></p>
+      <p>The Empress</p>
+      </td>
+    <td>50</td>
+    <td>30</td>
+    <td>20</td>
+    <td>2.0</td>
+    <td>-10</td>
+    <td>Prefers to strengthen her own royal troops then conquer abroad. Highly 
+      militaristic. </td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Wise.gif" width="100" height="100"></p>
+      <p>The Wise</p>
+      </td>
+    <td>30</td>
+    <td>20</td>
+    <td>50</td>
+    <td>2.5</td>
+    <td>-10</td>
+    <td>Prepares before she pounces.</td>
+  </tr>
+  <tr> 
+    <td><p><img src="../0ToBeDone/NewLayout/The%20Khan.gif" width="100" height="100"></p>
+      <p>The Khan</p>
+      </td>
+    <td>65</td>
+    <td>30</td>
+    <td>5</td>
+    <td>1.5</td>
+    <td>20</td>
+    <td>Not much of a capitalist, more likely to capitilize on weak neighbors</td>
+  </tr>
+</table>
+</body>
+</html>

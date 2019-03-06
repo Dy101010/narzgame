@@ -1,0 +1,104 @@
+<html>
+<head>
+
+
+<title> Possible Game Layout</title>
+</head>
+
+<body>
+
+
+
+<h2><center>Game Year : <span id="txtRound">1</span>
+<font color="#0F5900">&nbsp&nbsp Price per solidier : $<span id="txtPriceMan">10</span></font></center>
+
+</h2><font color="#0F5900"><font color="black">
+
+
+
+<table width="750" border="1">
+	<tr>
+	<td width="300" height="401">
+
+<table border="1" height="445">
+        <tr> 
+          <td height="164" valign="top" id="txtActions"><p><font color="#FF0000" size="2">This 
+              is where the country actions are announced...</font></p>
+            <p>Country 12's turn.</p>
+            <p>The Khan moves (or The Khan decides to attack). </p>
+            <p>&nbsp;</td>
+          <td valign="top" id="txtActions"><p><img src="The Khan.gif"></p>
+            <p><font color="#FF0000" size="2"> Avatar of the leader who's turn 
+              it is in this column</font></p></td>
+        </tr>
+        <tr> 
+          <td height="55" colspan="2" valign="top" id="Stats"> <center>
+              Country Stats <font color="#FF0000" size="2">(human player's)</font> 
+            </center>
+            <div align="center">
+              <table border="1">
+                <center>
+                  <tr> 
+                    <td>Gold : 50</td>
+                    <td><div align="center">Solidiers : 100</div></td>
+                  </tr>
+                  <tr> 
+                    <td>Skill : 35</td>
+                    <td>Economy : 200</td>
+                  </tr>
+                </center>
+              </table>
+            </div></td>
+        </tr>
+        <tr>
+          <td height="185" colspan="2"> <u>Your Orders Sir?</u> : Country #1<br>
+            <font color="#FF0000" size="2">(this window comes up when it's the player's 
+            turn)</font><br> <input type="radio" name="orders" id="econ"/>
+            Put money back into the economy<br>
+            <input type="radio" name="orders" id="men"/>
+            Hire solidiers<br> <input type="radio" name="orders" id="train"/>
+            Train your solidiers<br>
+            <input type="radio" name="orders" id="radio"/>
+            Goto war with neighboring country<br> <input type="radio" name="orders" id="move"/>
+            Move men to adjoining friendly nation<br> <input type="radio" name="orders" id="spy"/>
+            Recruit a spy<br> <br> <button align="center"  onclick="GoHuman()">Let 
+            it be done!</button></td>
+        </tr>
+      </table>
+
+
+</td><td width="452">
+
+<table border="0" cellspacing=0 cellpadding=0>
+
+<tr style="position: relative">
+  <IMG  id="im1" style="position: absolute;  left:5; top:100;  z-index:2; display:inline" src="The Narz.gif" width="50" height="50"/>
+  <IMG id="im2" style="position: absolute;  left:120; top:50; z-index:2; display:inline"  src="The Playful.gif" width="50" height="50"/>
+  <IMG id="im3" style="position: absolute; left:80; top:245;  z-index:2; display:inline"  src="The Machine.gif" width="50" height="50"/>
+  <IMG id="im4" style="position: absolute; left:190; top:140;  z-index:2; display:inline"  src="The Plebeian.gif" width="50" height="50"/>
+  <IMG id="im5" style="position: absolute; left:50; top:360;  z-index:2; display:inline"  src="The Seductress.gif" width="50" height="50"/>
+  
+  <IMG id="im6" style="position: absolute; left:270; top:380;  z-index:2; display:inline"  src="The Unimpressed.gif" width="50" height="50"/>
+  <IMG id="im7" style="position: absolute; left:275; top:285;  z-index:2; display:inline" src="The Unrepressed.gif" width="50" height="50"/>
+  <IMG id="im8" style="position: absolute; left:380; top:280;  z-index:2; display:inline" src="The Peaceful.gif" width="50" height="50"/>
+  <IMG id="im9" style="position: absolute; left:170; top:240;  z-index:2; display:inline" src="The Creator.gif" width="50" height="50"/>
+  <IMG id="im10" style="position: absolute; left:350; top:120;  z-index:2; display:inline" src="The Empress.gif" width="50" height="50"/>
+  
+  <IMG id="im11" style="position: absolute; left:370; top:20;  z-index:2; display:inline"  src="The Wise.gif" width="50" height="50"/>
+  <IMG id="im12" style="position: absolute; left:240; top:30;  z-index:2; display:inline" src="The Khan.gif" width="50" height="50"/>  
+    
+  <td id="map" width="450" height="450" style="top:1">
+    <img src="Map.gif" width="450" height="450" style="z-index:1" />
+	  </td>
+</tr>
+
+<tr>
+  <td><button onClick="runRound()">Begin Game</button>&nbsp&nbsp
+  <button onClick="pause()">Pause/Resume</button></td>
+</tr>
+
+</table>
+</table>
+
+</font></font></body>
+</html>

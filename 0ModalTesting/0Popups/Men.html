@@ -1,0 +1,44 @@
+
+
+
+
+<table>
+
+<tr><td id="HowManyMen">
+         <u>Your Orders Sir?</u> : Country #1<br><br>
+          
+         How many men do you want to hire?<br><br>  
+         <input type="number" name="HowMany" id="HowMany" onClick="Compute()">
+                
+          <br><br><button> Maximum </button><br>
+                
+         <!-- The "Maximum" buton automatically hires the maximum amount
+         of solidiers and the player keeps the remainder. -->
+
+<br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+<img src="/Div.gif" width="100%" height="4" alt=""> <br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+
+<br>
+          <button align="center" onClick="Compute()"> Let it be done! </button>
+          
+          
+     <!-- The game should validate the code (make sure the user has enough gold to
+      cover his promises) and then implement them if he does.  Otherwise it would
+      print a messege, not enough gold. -->
+          
+</td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+<!--
+function Compute()
+{
+  window.returnValue = HowMany.value;
+  window.close();
+}
+// -->
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>Modal Window</title>
+</head>
+<body onload="FillTextFromArgs()">
+
+<p>I am a Modal Window and will return
+   the input of the following text box.</p>
+<select id="selInput"></select>
+<BR/>	
+<input type="text" id="txtInput1"/>
+<input type="text" id="txtInput2"/>
+
+<button onClick="MyFunc()">Click Button to close</button>
+</body>
+</html>
+
+<script type="text/javascript">
+<!--
+function FillTextFromArgs()
+{
+ txtInput1.value = window.dialogArguments[0]; 
+ txtInput2.value = window.dialogArguments[1];
+ var arrOpts = window.dialogArguments[2];
+ for (i=0; i < arrOpts.length; ++i)
+ {
+   	var oOption = document.createElement("OPTION");
+  	 oOption.text= arrOpts[i];
+ 		 oOption.value=arrOpts[i];
+ 		 selInput.add(oOption);
+ }
+}
+
+function MyFunc()
+{
+  window.returnValue =  Array(txtInput1.value,txtInput2.value,selInput.options[selInput.selectedIndex].value);
+  window.close();
+}
+// -->
+</script>
+

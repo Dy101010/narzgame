@@ -1,0 +1,42 @@
+<HTML>
+
+  <HEAD>
+    <TITLE>MyChessViewer Demonstration</TITLE>
+  </HEAD>
+
+  <CENTER>
+  <BODY background="bakgrnd2.jpg">
+    <SCRIPT LANGUAGE="JavaScript">
+
+        // make sure this browswer supports Java 1.1
+
+        if ((navigator.appName == "Microsoft Internet Explorer" && parseFloat(navigator.appVersion) < 4)    ||
+            (navigator.appName == "Netscape"                    && parseFloat(navigator.appVersion) < 4.06) ||
+            !navigator.javaEnabled())
+        {
+            window.location="UpgradeBrowser.htm";
+        }
+
+    </SCRIPT>
+    <H2> <FONT COLOR="Maroon">Some Tactical Puzzles</FONT></H2>
+    <APPLET code="ChessBoard.class" align="baseline" width="630" height="560">
+
+      <!-- the pgn game file -->
+
+      <PARAM name=pgngamefile value="DailyTactics.pgn">
+
+      <!-- use custom RGB colors -->
+
+      <PARAM name=lightSquares value="9EC2EF">
+      <PARAM name=darkSquares  value="1474A3">
+      <PARAM name=background   value="0E5172">
+
+      <!-- turn puzzle mode on -->
+
+      <PARAM name=puzzlemode value="on">
+    </APPLET>
+  </BODY>
+
+  </CENTER>
+
+</HTML>

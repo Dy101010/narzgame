@@ -1,0 +1,86 @@
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.8"]
+[Result "1-0"]
+[White "Ermenkov"]
+[Black "Ostojic"]
+[FEN "2b1k1r1/rq2b2p/pn3Qp1/3p2B1/8/1PN5/1P3PPP/R3R1K1 w - - 0 0"]
+
+1. Nb5 axb5 ( 1... Kd8 2. Qd6+ {and black's pieces start falling} )  2. Rxa7 Qxa7 3. Rxe7+ 1-0
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.7"]
+[Result "1-0"]
+[White "Fischer"]
+[Black "Beach"]
+[FEN "1r2k2r/p1q3bp/4p1pB/3pn3/1p2N1P1/6QP/PPP5/1K1R3R w - - 0 0"]
+
+1. Nd6+ {!!}  Kd8 ( 1... Qxd6 2. Bxg7 {and the knight falls next}) ( 1... Kf8 2. Qxe5
+{The black bishop is helpless in its pins} )  2. Bxg7 Qxg7 3. Qxe5 Qxe5 4. Nf7+
+{and white gets back the queen leaving him up a piece} 1-0
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.6"]
+[Result "1-0"]
+[White "Dlugy"]
+[Black "Soltis"]
+[FEN "r3nrn1/pp3pkp/3p2p1/2pP2Pq/2P1P3/5N1b/PP1QBN1P/R4RK1 w - - 0 0"]
+
+1. Ne1 Qh4 2. Qc3+ {double attack} f6 3. Qxh3 {White wins a piece} 1-0
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.5"]
+[Result "1-0"]
+[White "Ullmann"]
+[Black "Bronstein"]
+[FEN "4r1k1/p4pqp/1b3R2/2pN4/2P2Q2/P3P2P/6PK/8 w - - 0 0"]
+
+1. Rxb6 axb6 2. Nf6+ Kf8 ( 2... Kh8 3. Nxe8
+{...and white is a knight and a pawn ahead.} )  3. Qd6+ Re7 4. Qd8+ Re8 5. Qxe8# 1-0
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.4"]
+[Result "0-1"]
+[FEN "2r4k/pB4bp/6p1/6q1/1P1n4/2N5/P4PPP/2R1Q1K1 b - - 0 0"]
+
+1. Qxc1 Qxc1 2. Rxc3 Qe1 ( 2... Qxc3 3. Ne2+)  3. Rc1 Qxc1 4. Ne2+ 0-1
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.3"]
+[White "GM Mikhail Krasenkow"]
+[Black "GM Utut Adianto"]
+[Result "1-0"]
+[FEN "1r2k2r/3b1ppp/ppQ2b1q/2B1pP2/3N4/6P1/PP5P/3RR1K1 w - - 0 0"]
+
+1. Ne6
+{!! - Mate in one. (almost - black could play Qxh2)} Bxc6 2. Nc7# 1-0
+
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[Date "2000.6.2"]
+[Result "0-1"]
+[FEN "4r2k/pp3p2/2b3r1/7N/4n2p/2Pp1B1P/PP3P2/3RRK2 b - - 0 0"]
+
+1... Nd2+ 2. Rxd2 Rxe1+ 3. Kxe1 Rg1# 0-1
+
+[Event "Daily Chess Tactic"]
+[Site "MyChess.com"]
+[White "Lasker"]
+[Black "Capablanca"]
+[Date "2000.6.1"]
+[Result "1-0"]
+[FEN "2r2rk1/pp2bpp1/4pn1p/qb2N3/3P4/1BN5/PPQ2PPP/3RR1K1 w KQkq - 0 0"]
+
+1. Ng6 {!!}  Rfe8 ( 1... fxg6 2. Bxe6+ Kh7 3. Bxc8 Rxc8 4. Rxe7)  2. Rxe6
+{it's all over baby}  fxe6 ( 2... fxg6 3. Ra6+
+{and black looses his queen} )  3. Bxe6+ Kh7 4. Nf8+
+{double check!}  Kh8 5. Qh7+ Nxh7 6. Ng6#
+{Nice smother mate.}  1-0
+
+

@@ -1,0 +1,310 @@
+<html>
+<head>
+
+<title> Front End for 1-Player Version : 1/8/03</title>
+
+ <script type="text/javascript">
+
+function openpopup(){
+var popurl="WindowDescrip.html"
+winpops=window.open(popurl,"myWin","width=650,height=540,resizable,")
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+<table width="720" border="1">
+
+<tr><td>
+
+<table cellspacing=0 cellpadding=0 width="475" height="400">
+
+    <img src="20countryMap.gif" width="475" height="400" style="z-index:1" />
+  </td>
+</tr>
+
+</table>
+
+</td>
+<td>
+
+<table width="255" border="1" cellpadding="5"><h4>
+
+
+<tr><td colspan="2" height="40"><center>* Game Year : <span id="txtRound">1</span> *<br>
+* Price per solidier : $<span id="txtPriceMan">15</span> *</center>
+</td></tr>
+
+
+<tr>
+<td colspan="2" height="115" valign="top" id="txtActions">
+
+<p><b><a href="javascript:openpopup()">Explanations of each the purpose of each window</a></b></p>
+</td></tr>
+
+		<!--- Human Player Options -->
+
+<tr>
+<td width="80%">
+<p><u>Country Statistics</u><br>
+Country #3<br>
+Ruled by <font color="#FF0000">HUMAN PLAYER<font color="black"><br>
+</td>
+
+<td width="20%">
+<img src="Malone.gif"
+</td></tr>
+
+<tr>
+<td>
+<p>Gold &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: 50<br>
+Economy : 150<br>
+Men &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : 100<br>
+Skill &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp : 25</p></td>
+
+<td>
+Thanks for giving PLAYER NAME!  Economy rises to 175
+</td>
+
+</tr><tr>
+
+
+<td colspan="2">
+	<b>Your orders sir?</b><br>
+	<select name="orders">
+		<option name="orders" value="econ">Put money back into the economy</option>
+		<option name="orders" value="men">Hire solidiers</option>
+		<option name="orders" value="train">Train your solidiers</option>
+		<option name="orders" value="war">Goto war with neighboring country</option>
+		<option name="orders" value="move">Move men to adjoining friendly nation</option>
+		<option name="orders" value="spy">Recruit a spy</option>
+	</select>
+<br>
+		<input type="submit" align="center" value="Let it be done!">
+
+</td></tr></table>
+
+
+
+
+</td></tr></table>
+
+
+<br><p>Country Stats will not be needed for the 1 player version, I'm just leaving this table
+here for now for testing purposes.</p><br>
+
+        <table  id="tblStats" width="350"  border="1" cellpadding="5">
+ 
+         <tr>
+                
+                <td width="16%"><b>Country</b></td>
+                
+                <td width="16%"><b>Leader</b></td>
+                
+                <td width="16%"><b>Gold</b></td>
+                
+                <td width="16%"><b>Men</b></td>
+                
+                <td width="16%"><b>Skill</b></td>
+                
+                <td width="16%"><b>Economy</b></td>
+                
+        </tr>
+        <tr>
+                <td width="16%" id="1" >1</td>
+                
+                <td width="16%"><font color="#5A5A5A"> AvgJoe <font color="black"></td> <!--this is the color of AvgJoe-->
+                
+                <td width="16%">34</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">64</td>
+                
+                <td width="16%">36</td>
+                
+                <td width="16%">144</td>
+                
+        </tr>
+        <tr>
+        
+                <td width="16%" id="2">2</td>
+                
+                <td width="16%">
+                <font color="#FF0000"> Narz <font color="black"></td> <!--this is the color of Narz-->
+                
+                <td width="16%">61</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">117</td>
+                
+                <td width="16%">44</td>
+                
+                <td width="16%">173</td>
+                
+        </tr>
+        <tr>
+        
+                <td width="16%" id="3">3</td>
+                
+                <td width="16%"><font color="#8F5100"> Newfangle <font color="black"></td> <!--this is the color of Newfangle-->
+                
+                <td width="16%">30</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">69</td>
+                
+                <td width="16%">31</td>
+                
+                <td width="16%">104</td>
+                
+        </tr>
+        <tr>
+
+                <td width="16%" id="4">4</td>
+                
+                <td width="16%">
+                <font color="#F386EF"> Mikoyan <font color="black"></td> <!--this is the color of Mikoyan-->
+                
+                <td width="16%">50</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">80</td>
+                
+                <td width="16%">28</td>
+                
+                <td width="16%">149</td>
+                                
+        </tr>
+        <tr>
+
+                <td width="16%" id="5">5</td>
+                
+                <td width="16%">
+                <font color="#6A1D5B"> Shogun <font color="black"></td> <!--this is the color of Shogun-->
+                
+                <td width="16%">21</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">99</td>
+                
+                <td width="16%">50</td>
+                
+                <td width="16%">120</td>
+                
+        </tr>
+        <tr>
+
+                <td width="16%" id="6">6</td>
+                
+                <td width="16%">
+                <font color="#056700"> Insurgent <font color="black"></td> <!--this is the color of Insurgent-->
+                
+                <td width="16%">33</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">105</td>
+                
+                <td width="16%">43</td>
+                
+                <td width="16%">186</td>         
+         
+        </tr>
+        <tr>
+
+                <td width="16%" id="7">7</td>
+                
+                <td width="16%">
+                <font color="#000A67"> YodaPower <font color="black"></td> <!--this is the color of YodaPower-->
+                
+                <td width="16%">35</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">102</td>
+                
+                <td width="16%">41</td>
+                
+                <td width="16%">102</td>         
+         
+        </tr>
+        <tr>
+
+                <td width="16%" id="8">8</td>
+                
+                <td width="16%">
+                <font color="#FE8F00"> LordDalaran <font color="black"></td> <!--this is the color of LordDalaran-->
+                
+                <td width="16%">30</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">56</td>
+                
+                <td width="16%">27</td>
+                
+                <td width="16%">146</td>         
+         
+        </tr>
+        <tr>
+
+                <td width="16%" id="9">9</td>
+                
+                <td width="16%">
+                <font color="#FEB9B2"> FunxusKhan <font color="black"></td> <!--this is the color of FunxusKhan-->
+                
+                <td width="16%">69</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">85</td>
+                
+                <td width="16%">33</td>
+                
+                <td width="16%">104</td>         
+         
+        </tr>
+        <tr>
+
+                <td width="16%" id="10">10</td>
+                
+                <td width="16%">
+                <font color="#0BEA00"> SupaWeaky <font color="black"></td> <!--this is the color of Chris-->
+                
+                <td width="16%">16</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">42</td>
+                
+                <td width="16%">19</td>
+                
+                <td width="16%">107</td>         
+         
+        </tr>
+        <tr>
+
+                <td width="16%" id="11">11</td>
+                
+                <td width="16%">
+                <font color="#BF0000"> YoungC <font color="black"></td> <!--this is the color of YoungC-->
+                
+                <td width="16%">22</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">79</td>
+                
+                <td width="16%">30</td>
+                
+                <td width="16%">160</td>         
+         
+        </tr>
+        <tr>
+
+                <td width="16%" id="12">12</td>
+                
+                <td width="16%">
+                <font color="#848484"> G-Man <font color="black"></td> <!--this is the color of G-Man-->
+                
+                <td width="16%">47</td>
+                
+                <td bgcolor="#E3E3E3" width="16%">74</td>
+                
+                <td width="16%">27</td>
+                
+                <td width="16%">132</td>
+         
+        </tr>       
+</table>
+
+
+</body>
+</html>

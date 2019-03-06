@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Untitled</title>
+</head>
+<body>
+<p>This is a sample page showing the modal dialog feature of IE5</p>
+<button onclick="MyFunc()"/>Click to open a modal dialog window</button>
+</body>
+</html>
+
+<script type="text/javascript">
+<!--
+function MyFunc()
+{
+ var arrOpts = Array("A","B","C");
+ var ret = window.showModalDialog("modal.html", Array("testarg1","testarg2",arrOpts),
+	                       "dialogHeight: 500px; dialogWidth: 500px; dialogTop: 0px;" +
+												 "dialogLeft: 0px; center: Yes; help: Yes; resizable: Yes;" +
+												 " status: Yes;");
+ alert('The return value is:' + ret[0] + ret[1]+ ret[2]);
+}
+// -->
+</script>

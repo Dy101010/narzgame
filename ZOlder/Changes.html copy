@@ -1,0 +1,48 @@
+<html>
+<head><title>W.C. : New Game Changes</title></head>
+<body>
+
+<p>Here are some chages I had in mind for the latest version of the game!</p>
+
+<ol>
+
+</li><br><li>If a leader has 25 men or fewer he will automatically hire on his turn.
+
+</li><br><li>Game turns will be random, for example :<br>
+6, 5, 2, 12, 10... etc. as opposed to<br>
+1, 2, 3, 4, 5... etc.<br>
+Each game year the order will be different.
+
+</li><br><li>If a ruler loses his last country the game outputs "(ruler name) has been annihilated!"
+
+</li><br><li>Game sounds : For effects such as battles, end of turn, leader conquers all, etc.
+ (I will try to figure this one out myself)
+
+</li><br><li>To raise the Economy level 1 point now requires 2 gold.  The economy maxes out at 2500 (this
+applies to both the human and A.I.).  After the economy hits 2500 the A.I. will only hire
+or train solidiers (or move troops).
+
+</li><br><li>If an A.I. nation has no hostile territories nearby to attack he will fortifty all
+but 26 of his troops into a friendly ajoining nation.
+
+</li><br><li>If defender's economy+gold is not at least 50% of attacker's (economy+gold) then
+the attackers likelihood of attack drops 15%
+
+</li><br><li>If defender's economy+gold is twice as high (or more) as the attacker's then
+the attackers chance of attack rises by 15%
+
+</li><br><li>Add icons for when leaders build into economy or hire or train men or move
+them to an adjacent territory :<br>
+<img src="Build.gif">&nbsp&nbsp
+<img src="Hire.gif">&nbsp&nbsp
+<img src="Train.gif">&nbsp&nbsp
+<img src="Move.gif">&nbsp&nbsp<br>
+
+</li><br><li>Add "PowerChart" to be displayed at the end of game when someone conquers the
+world (I will explain this a bit more in depth, just ask me about it)
+
+</li>
+</ol>
+
+</body>
+</html>

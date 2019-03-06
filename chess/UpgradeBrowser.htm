@@ -1,0 +1,26 @@
+<HTML>
+  <HEAD>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="mychess.css">
+    <TITLE>Browser Upgrade Needed</TITLE>
+  </HEAD>
+  <CENTER>
+  <BODY>
+    <H2>Browser Upgrade Needed!</H2>
+    <P>This site makes use of Java 1.1 which is supported in <B>Netscape Navigator 4.06</B> (and above) and <B>Microsoft Internet Exporer 4.0</B> (and above). Click on a browser logo below to upgrade.</P>
+
+    <SCRIPT LANGUAGE="JavaScript">
+
+        if (navigator.appName == "Microsoft Internet Explorer" && !navigator.javaEnabled() && parseFloat(navigator.appVersion) >= 4)
+        {
+            document.write("<P>Your copy of Microsoft Internet Explorer does not have java enabled (even though you may have a sufficient version). Get your Java VM <A HREF=\"http://www.microsoft.com/java/vm/dl_vm40.htm\"><B>here</B></A>.</P>");
+        }
+
+    </SCRIPT>
+
+    <A HREF="http://www.netscape.com/computing/download/" BORDER=0><img ALT="Netscape Netcenter" SRC="nnc_lockup.gif" WIDTH="123" HEIGHT="33" BORDER=0></A>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <A HREF="http://www.microsoft.com/windows/ie/" BORDER=0><img ALT="Download the Internet Explorer" SRC="lgoIE.gif" WIDTH="73" HEIGHT="68" BORDER=0></A>
+
+  </BODY>
+  </CENTER>
+</HTML>

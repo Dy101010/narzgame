@@ -1,0 +1,53 @@
+
+<table>
+
+<tr><td id="WarInfo">
+         <u>Your Orders Sir?</u> : Country #1<br><br>
+          
+          Which country would you like to go to war with?<br><br>  
+       <select name="WarCountry" id="WarCountry">
+		  <option value="3">Country 3</option>
+  		  <option value="4">Country 4</option>
+  		  <option value="7">Country 7</option>
+		</select><br><br>
+		
+		<!-- I figured this would be a good place to use a drop down box -->
+		
+		<!-- If the player owns akk neighboring countries (and therefore couldn't
+		attack from the current country) he would not get
+		this window, instead he'd get an alert saying "You can't attack from
+		this country!" -->
+          
+         How many men would you like to bring to battle?<br><br>  
+         <input type="number" name="HowMany" id="HowMany"/>
+
+
+<br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+<img src="/Div.gif" width="100%" height="4" alt=""> <br clear=all>
+<img src="spacer.gif" width="1" height="9" alt=" "><br clear=all>
+
+<br>
+          <button align="center" onClick="Compute()"> Let it be done! </button>
+          
+          
+     <!-- The game should validate the code and make sure the player has at least
+     enough men to battle with.  I figure we should make it so he has to leave at
+     least one solidier behind just to aviod game errors (if he is attacked with
+     fewer than one solidier). -->
+          
+</td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+<!--
+function Compute()
+{
+  window.returnValue = WarCountry.value;
+  window.returnValue = HowMany.value;  
+  window.close();
+}
+// -->
+</script>

@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="Microsoft Word 73.1">
+<TITLE>NarzWarz Explanation</TITLE>
+</HEAD>
+<BODY>
+
+<B><U><FONT SIZE=5><P>The Attack Sequence</P>
+</B></U><P>The attack sequence for this version of the game is a simple as can be. Let me use an example to elaborate. Lets say Shogun from Country#5 decides to attack Mikoyan</FONT><FONT SIZE=5 COLOR="#c0c0c0"> </FONT><FONT SIZE=5> in Country#4 (this is ok because their countries are adjacent). Shogun has 92 solidiers and a 48 skill. Mikoyan has 46 solidiers with a 32 skill. </P>
+
+<P>Here's how it will work : The skill of the two combatants will be added together into a variable. Then a random number will be choosen between 1 and the variable. If the number is greater than the attacker's skill then the attacker loses a man, if it is lower, the defended does. The loop repeats until either the attacker or defender has lost all his troops. If the attacker wins he takes control of the new country and gets all the gold left behind, also his skill level rises 5 points. If the defender wins his skill also rises 5.</P>
+
+<B><U><P>How the A.I. will operate</P>
+</B></U><P>The A.I. is not too bright in this version of the game, but it will be smart enough so that the player won't be able to be too careless. What each A.I. country does each turn (builds economy, hires men or trains them) will be random with the one exception that if he has fewer than 25 men he will automatically hire. Also if he has no hostile neighbors (he is surrounded by countries he owns and no enemies) and has 50 or more men, he will transfer troops to one of his adjacent terriotories.  As for attacking the A.I. countries will consider attack if they have at least 50% more men than an adjacant leader. They will always attack their weakest neighbor (if they "decide" to attack).</P>
+
+<P>Here is the formula to determine whether the one country will attack another. Divide the number of men in the attacker's country by the number of men in the defender's country (example 112 divided by 43 = 2.6). Then multiple this number by 10 (26). If the attacker has more than 2.5 times the men of the defender then the chance of attack variable will go up additional 5, if the attacker has less than 2.5 times as many men of his intended victim the variable will go down 5 (in this case 112 is more than 2.5 times as much as 43 so the variable goes up 5 to 31). Then designate a variable that chooses a random number between 1 and 100. If the number is equal or lower than the first variable (31) then the country will attack. So basically in this case the chance of attack is 31%.  The attacking nation will bring between 65 and 75% (random) of his troops to the fight (leaving the rest to defend the home country).</P>
+
+<P>Also, if the potential defender's economy + gold is double the attacker's economy + gold the chance of attack goes up 15% (beside the attacker is enticed by all those riches).  If the potential defender's economy + gold is only half of the attacker's the chance of attack goes down 15% (because the attacker figures that country is not worth attacking).</P>
+
+<U><P>Changes to how the A.I. operates that I want to implement</P>
+</U><P>This is the way the A.I. operates right now.  Each country and leader goes through the exact same process each turn.  He </FONT><FONT SIZE=4>trains</FONT><FONT SIZE=5>, hires or builds into the economy at random (1/3 of the time each) and each's chance of attack is the same under the same circumstances.  To make the game more interesting I invented the following leader "personalities" :</P>
+
+</FONT><FONT FACE="Verdana"><P>(1) <U>General</U> : He may attack if he has 1.5 times as many men as his opponent.  If he has more than 2.5 times as many the chances of him attacking go up a further 5%.</P>
+<P>When not attacking, he will Hire (40%), Train (40%) or Build (20%)</P>
+
+<P>(2) <U>Commander</U> : He may attack if he has 1.5 times as many men as his opponent.  If he has more than 2.5 times as many the chances of him attacking go up a further 5%.</P>
+<P>When not attacking, he will Hire (25%), Train (55%) or Build (20%)</P>
+
+<P>(3) <U>Balanced</U> : He may attack if he has 2.25 times as many men as his opponent.</P>
+<P>When not attacking, he will Hire (25%), Train (35%) or Build (40%)</P>
+
+<P>(4) <U>Patient Warrior</U> : He may attack if he has 2.5 times as many men as his opponent.  His chance of attack will always be 5% less than normal.</P>
+<P>When not attacking, he will Hire (25%), Train (55%) or Build (20%)</P>
+
+<P>(5) <U>Patient Builder</U> : He may attack if he has 2.5 times as many men as his opponent.  His chance of attack will always be 5% less than normal.</P>
+<P>When not attacking, he will Hire (20%), Train (30%) or Build (50%)</P>
+</FONT><FONT FACE="Times" SIZE=4>
+<P>I figure this shouldn't be too hard.  Simply a matter of adding a new variable into the "gleaders" array and then accessing it from "should_fight" function and the "prepare" function.</P>
+
+<P>&nbsp;</P>
+<U><P>What the different commands are for (both for the player and the A.I.)</P>
+</U></FONT><FONT FACE="Times" SIZE=5>
+</FONT><FONT SIZE=5><P>1.&#9;<B>Build economy</B> : Each turn, each country collects taxes : their gold increases by 20% of the economy level. By putting gold back into your economy you increase the economy level and thus get more gold in each future year. For each <I>two</I> units of gold you put back into the economy, the economy level rises 1 point.  The economy level maxes out at 5000 (it cannot get any higher after this point).  The A.I. will always give all of their gold to the economy (unless its an odd number) if they choose to build.</P>
+<P>2.&#9;<B>Hire men</B> : To conquer the world you need solidiers. You need gold to hire them, the price to hire them fluctuates (between -2 and +4 difference per turn) and maxes out at 50.</P>
+<P>3.&#9;<B>Train men</B> : It is important to have a high skill rate or you will lose many more soliders in battle than you would like (I will describe the battle sequence process later). Every time you train your men your skill level rises between 4 and 6 points.</P>
+<P>4.&#9;<B>Goto war with a neighboring country</B> : This is how you attack and attempt to capture a neighboring country. When you decide to attack you will be prompted how many solidiers you would like to bring to the battle. If you win you capture the new country and all their gold and your skill rises 5 points.</P>
+<P>5.&#9;<B>Move soliders to a neighboring country (that you own)</B> : Once you have captured a few countries you may want to move some of your men to the front lines, this is how you do it. Unlike other commands you can move solidiers and not end your turn (you still get to do something else). Note : in this version the A.I. countries will never move their solidiers from one country to another.</P>
+<P>6.&#9;<B>Send out a spy</B> : In future versions spies will have many tasks. In this one, they have just one, namely to spy on the A.I. countries to see how strong or weak they are so you can determine whether or not the time is ripe for an attack. Spies cost 50 gold each. This is also a command that will not end your turn. Note : the A.I. leaders will not use this command as they will have access to whatever information they need already.</P></FONT></BODY>
+</HTML>
